@@ -81,25 +81,30 @@ public class ControlFlowExercises {
 
         System.out.println("***** Start Question 10 *****");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter an integer");
-        int userNumber = scanner.nextInt();
-        System.out.printf("The number you entered is: %s%n", userNumber);
-        System.out.println("Here is your table!\n");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | ------");
-        int m = 1;
-        while (m <= userNumber) {
-            System.out.printf("%d      |%d        |%d     \n", m, m * m, m * m * m);
-            m++;
+
+        String userResponse;
+        do {
+            System.out.println("Enter an integer");
+            int userNumber = scanner.nextInt();
+            System.out.printf("The number you entered is: %s%n", userNumber);
+            System.out.println("Here is your table!\n");
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | ------");
+            int m = 1;
+            while (m <= userNumber) {
+                System.out.printf("%d      |%d        |%d     \n", m, m * m, m * m * m);
+                m++;
+            }
+
             System.out.println("Would you like to continue? Y/N");
-            String userResponse = scanner.next();
-            if (userResponse == "Y") {
-                continue;
-            }
-            if (userResponse == "N") {
-                break;
-            }
-        }
+            userResponse = scanner.next();
+//            if () {
+//                continue;
+//            }
+//            if (userResponse == "N") {
+//                break;
+//            }
+        } while (userResponse.startsWith("y") || userResponse.startsWith("Y"));
     }
 
 }
