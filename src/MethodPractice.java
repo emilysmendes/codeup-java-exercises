@@ -98,6 +98,7 @@ public class MethodPractice {
         System.out.println(modulus(8, 6));
         System.out.println(sayName("Codeup Staff"));
         System.out.println(getInteger(1, 10));
+//        System.out.println(diceRoll());
     }
 
     public static String returnName() {
@@ -193,19 +194,28 @@ public class MethodPractice {
             userNumber = scanner.nextInt();
         } while (userNumber < 1 || userNumber > 10);
         return userNumber;
-        
 
-}
+
+    }}
 
     // TODO: Calculate the factorial of a number. Prompt the user to enter an integer from 1 to 10. Display the factorial of the number entered by the user. Ask if the user wants to continue. Use a for loop to calculate the factorial. Assume that the user will enter an integer, but verify it’s between 1 and 10. Use the long type to store the factorial. Continue only if the user agrees to.
 
-    public static long factorial() {
-        Scanner scanner = new Scanner(System.in);
-        int factorial = getInteger(1, 10);
+//    public static long factorial() {
+//        Scanner scanner = new Scanner(System.in);
+//        long factorial = getInteger(1, 10);
+//
+//
+//    }
+
+    // TODO: Create an application that simulates dice rolling.
 
 
-    }
-
-
-}
+//    public static String diceRoll (int userDiceRoll) {
+//        double diceRoll1 = Math.floor(Math.random() * userDiceRoll) * 1;
+//        double diceRoll2 = Math.floor(Math.random() * userDiceRoll) * 2;
+//
+//
+//
+//    }
+//}
 
