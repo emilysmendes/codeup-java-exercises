@@ -16,6 +16,7 @@ public class Input {
 //        return .toString();
 //    }
 
+
     public boolean yesNo() {
         System.out.println("Do you like cheese?");
         String answer = scanner.nextLine();
