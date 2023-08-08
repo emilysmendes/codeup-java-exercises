@@ -1,6 +1,5 @@
-public class ObjectOrientedProgrammingPractice {
+public class Person {
 
-    public class Person {
 
         private String name;
 
@@ -21,4 +20,3 @@ public class ObjectOrientedProgrammingPractice {
         }
 
     }
-}
