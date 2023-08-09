@@ -4,26 +4,39 @@ import java.util.ArrayList;
 
 public class Student {
 
-    private int grade;
-    private String Name;
+
+    protected String name;
+    ArrayList<Integer> grades;
+
+
+    public Student (String name) {
+        this.name = name;
+        this.grades = new ArrayList<>();
+    }
 
     // returns the student's name
     public String getName() {
-        return this.Name;
+        return this.name;
     }
 
     // adds the given grade to the grades property
-    public int addGrade(int grade) {
-        return this.grade;
+    public void addGrade(int grade) {
+        grades.add(grade);
     }
 
     // returns the average of the students grades
     public double getGradeAverage() {
-        return (double) this.grade / grades.size();
+            int total = 0;
+        for(int grade: grades) {
+            total += grade;
+        }
+        return (double) total/grades.size();
     }
 
-    ArrayList<Integer> grades = new ArrayList<>();
 
+    public String toString() {
+        return getName();
+    }
 
 
 }
