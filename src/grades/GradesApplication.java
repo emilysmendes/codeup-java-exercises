@@ -8,6 +8,7 @@ public class GradesApplication {
     final private static Input input = new Input();
 
 
+
     public static HashMap<String, Student> hashMaps() {
         HashMap<String, Student> students = new HashMap<>();
 
