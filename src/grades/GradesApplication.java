@@ -53,6 +53,7 @@ public class GradesApplication {
 
     }
 
+
     private static boolean userWantsToContinue() {
         return input.yesNo("Do you want to see another Student?");
     }
