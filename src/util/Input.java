@@ -11,24 +11,24 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
-    public String getString () {
+    public String getString (String s) {
         return this.scanner.nextLine();
 
     }
 
-    public boolean yesNo () {
+    public boolean yesNo (String s) {
 //        String userInput = scanner.nextLine();
 //        if (userInput.startsWith("y") || userInput.startsWith("Y")) {
 //            return true;
 //        }
 //        return false;
-        return this.getString().trim().toLowerCase().startsWith("y");
+        return this.getString("Enter the username you want more info on:").trim().toLowerCase().startsWith("y");
     }
 
     public int getInt () {
 //        return scanner.nextInt();
         try {
-            return Integer.parseInt(this.getString());
+            return Integer.parseInt(this.getString("Enter the username you want more info on:"));
         } catch (NumberFormatException e) {
             System.out.println("You must enter a whole number");
             return this.getInt();
@@ -61,7 +61,7 @@ public class Input {
 //        System.out.println(userInput);
 //        return userInput;
         try {
-            return Double.parseDouble(this.getString());
+            return Double.parseDouble(this.getString("Enter the username you want more info on:"));
         } catch (NumberFormatException e) {
             System.out.println("You must enter a number");
             return this.getDouble();

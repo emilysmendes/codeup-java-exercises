@@ -5,7 +5,8 @@ import util.Input;
 import java.util.HashMap;
 
 public class GradesApplication {
-    private Input input = new Input();
+    final private static Input input = new Input();
+
 
     public static HashMap<String, Student> hashMaps() {
         HashMap<String, Student> students = new HashMap<>();
@@ -43,35 +44,33 @@ public class GradesApplication {
         HashMap<String, Student> students = hashMaps();
         System.out.println(students);
 
+    }
 
-        System.out.println("Welcome!");
-        System.out.println("Here are the GitHub usernames of our students: ");
-        System.out.println("What student would you like to see more information about?");
-//        String userResponse = scanner.nextLine();
-//        System.out.printf("Sorry, no student found with the GitHub username of %s. Would you like to see another student? Y/N", userResponse);
-//        String userResponse2 = scanner.nextLine();
-        System.out.println("What student would you like more information on?");
-//        String userResponse3 = scanner.nextLine();
-//        System.out.println(userResponse3);
-        System.out.println("Would you like another student?");
-//        String userResponse4 = scanner.nextLine();
-        System.out.println("Goodbye, and have a magical day!");
-
-
-        do {
-            printMenu(students);
-            getInput
-        } while (wantsToContinue);
-
-        private static void printMenu(HashMap<String, Student> hashMaps) {
-            System.out.println("Students usernames:\n");
-            hashMaps().keySet();
-
-        }
-
-        private static Boolean wantsToContinue () {
-            return input.yesNo("Would you like another student?");
-        }
+    private static void printMenu(HashMap<String, Student> hashMaps) {
+        System.out.println("Students usernames:\n");
+        hashMaps().keySet();
+        System.out.println();
 
     }
+
+    private static boolean userWantsToContinue() {
+        return input.yesNo("Do you want to see another Student?");
+    }
+
+    private static void getInputFromUserAndDisplayResponse(HashMap<String, Student> students) {
+        String userInput;
+        do{
+            userInput = input.getString("Enter the username you want more info on:");
+        } while(!students.containsKey(userInput));
+        displayStudentInfo(students.get(userInput), userInput);
+    }
+
+    private static void displayStudentInfo(Student student, String username) {
+        System.out.printf("Name - %s%n", student.getName());
+        System.out.printf("Username - %s%n", username);
+        System.out.printf("Grade Average - %.2f%n%n", student.getGradeAverage());
+    }
+
+
+
 }
