@@ -33,10 +33,8 @@ public class Student {
         return (double) total/grades.size();
     }
 
-
     public String toString() {
         return getName();
     }
-
 
 }
