@@ -98,12 +98,7 @@ public class ControlFlowExercises {
 
             System.out.println("Would you like to continue? Y/N");
             userResponse = scanner.next();
-//            if () {
-//                continue;
-//            }
-//            if (userResponse == "N") {
-//                break;
-//            }
+//
         } while (userResponse.startsWith("y") || userResponse.startsWith("Y"));
     }
 
