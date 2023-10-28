@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class Input {
     private Scanner scanner;
 
-
-
     public Input () {
         this.scanner = new Scanner(System.in);
     }
@@ -85,6 +83,15 @@ public class Input {
             System.out.printf("Must be between %f and %f%n", min, max);
             return getDouble(min, max);
         }
+    }
+
+    public static int divideNums (int a, int b) {
+        try {
+            return a / b;
+        } catch (IllegalArgumentException e) {
+            System.out.println("Cannot divide by 0!");
+        }
+        return divideNums(3, 4);
     }
 
 
