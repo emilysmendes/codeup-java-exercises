@@ -2,84 +2,6 @@ import java.util.Scanner;
 
 public class MethodPractice {
 
-    /*
-        METHOD STRUCTURE...
-
-        VISIBILITY_MODIFIER STATIC_OR_INSTANCE RETURN_TYPE METHOD_NAME(PARAM_DATATYPE PARAM, ...) {
-
-            BODY OF METHOD HERE
-
-        }
-
-        For Example...
-
-        public static void main(String[] args) {
-            System.out.println("Hello World");
-        }
-
-
-     */
-
-    // ----------- DEFINING AND CALLING METHODS WITH VARIOUS INPUTS (examples)
-
-    // no input or returned output
-
-//    public static void sayGreeting() {
-//        System.out.println("Hello");
-//    }
-//NEED TO CALL THE METHOD IN MAIN (can only have one main method)
-//    public static void main(String[] args) {
-////        Can sout the method call and will print whatever is in the return (if using return type)
-//        sayGreeting();
-//    }
-    // no returned output with input
-
-//    public static void sayInput(String input) {
-//        System.out.println(input);
-//    }
-
-    // returned output without input
-
-//    public static int returnSeven() {
-//        return 7;
-//    }
-
-    // return output given an input
-
-//    public static int returnInt(int someInt) {
-//        return someInt;
-//    }
-
-    // multiple parameters
-
-//    public static double returnProductOfThreeNums(double num1, double num2, double num3) {
-//        return num1 * num2 * num3;
-//    }
-
-
-    // using a method inside another method
-
-//    public static int returnSumOfInts(int intOne, int intTwo) {
-//        return returnInt(intOne) + returnInt(intTwo);
-//    }
-
-
-    // return type different from input type
-
-//    public static int returnLengthOfString(String input) {
-//        return input.length();
-//    }
-
-    // multiple input types
-
-//    public static String repeatStr(String str, int times) {
-//        return str.repeat(times);
-//    }
-
-//    public static void printCharMultipleTimes(char c, int repetitions) {
-//        System.out.println(String.valueOf(c).repeat(repetitions));
-//    }
-
 
     /**
      * METHOD MINI-EXERCISES
@@ -198,24 +120,4 @@ public class MethodPractice {
 
     }}
 
-    // TODO: Calculate the factorial of a number. Prompt the user to enter an integer from 1 to 10. Display the factorial of the number entered by the user. Ask if the user wants to continue. Use a for loop to calculate the factorial. Assume that the user will enter an integer, but verify it’s between 1 and 10. Use the long type to store the factorial. Continue only if the user agrees to.
-
-//    public static long factorial() {
-//        Scanner scanner = new Scanner(System.in);
-//        long factorial = getInteger(1, 10);
-//
-//
-//    }
-
-    // TODO: Create an application that simulates dice rolling.
-
-
-//    public static String diceRoll (int userDiceRoll) {
-//        double diceRoll1 = Math.floor(Math.random() * userDiceRoll) * 1;
-//        double diceRoll2 = Math.floor(Math.random() * userDiceRoll) * 2;
-//
-//
-//
-//    }
-//}
 
