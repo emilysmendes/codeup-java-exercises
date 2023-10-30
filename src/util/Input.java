@@ -15,16 +15,12 @@ public class Input {
     }
 
     public boolean yesNo (String s) {
-//        String userInput = scanner.nextLine();
-//        if (userInput.startsWith("y") || userInput.startsWith("Y")) {
-//            return true;
-//        }
-//        return false;
+
         return this.getString("Enter the username you want more info on:").trim().toLowerCase().startsWith("y");
     }
 
     public int getInt () {
-//        return scanner.nextInt();
+
         try {
             return Integer.parseInt(this.getString("Enter the username you want more info on:"));
         } catch (NumberFormatException e) {
@@ -34,13 +30,6 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-//        String userInput = scanner.nextLine();
-//        System.out.println("Enter an integer between 0-25");
-//        while (min < 0 || max > 25) {
-//            System.out.println("Please try another integer");
-//        }
-//        System.out.println(userInput);
-//        return userInput;
         int userInt = this.getInt();
         if (userInt >= min && userInt <= max) {
             return userInt;
@@ -51,13 +40,6 @@ public class Input {
     }
 
     public double getDouble() {
-//        System.out.println("Enter an integer between 0-25");
-//        String userInput = scanner.nextLine();
-//        while (min < 0 || max > 25) {
-//            System.out.println("Please try another integer");
-//        }
-//        System.out.println(userInput);
-//        return userInput;
         try {
             return Double.parseDouble(this.getString("Enter the username you want more info on:"));
         } catch (NumberFormatException e) {
@@ -73,9 +55,7 @@ public class Input {
 
     }
 
-
     public double getDouble(double min, double max) {
-//        return scanner.nextDouble();
         double userDouble = this.getDouble();
         if (userDouble >= min && userDouble <= max) {
             return userDouble;
